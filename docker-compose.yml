@@ -37,6 +37,13 @@ services:
     command: bash -c "cd checksloading && pytest"
     environment: 
       DJANGO_SETTINGS_MODULE: checksloading.settings
+      SECRET_KEY: django-insecure-1smtc!loc!aa-r0t2t=(j8u#(09!f()j4)6q4u%q@ujge7t^@s
+      DB_ENGINE: django.db.backends.postgresql
+      DB_NAME: checkloading_db
+      DB_USER: anton
+      DB_PASSWORD: pass
+      DB_HOST: checkloading_db
+      DB_PORT: 5432
     depends_on:
       - checkloading_db
 volumes: 
